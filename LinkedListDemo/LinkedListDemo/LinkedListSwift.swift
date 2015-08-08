@@ -41,6 +41,23 @@ class LinkedList: NSObject {
     }
     
     /**
+    翻转链表
+    
+    :param: now 递归起始点
+    */
+    func reverseList(now:LinkedList) {
+        if(now.next != nil){
+            self.reverseList(now.next!)
+            now.next?.next = now
+            now.next = nil
+        }
+        else
+        {
+            self.head?.next = now;
+        }
+    }
+    
+    /**
     逆序输出链表
     
     :param: now 链表表头的下一个元素地址

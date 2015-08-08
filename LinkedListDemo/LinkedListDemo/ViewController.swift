@@ -14,7 +14,15 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         var test = LinkedList()
         test.createList()
-        //test.showList()
+        test.showList()
+        
+        println("-------------------")
+        
+        test.reverseList(test.head!.next!)
+        test.showList()
+        
+        println("-------------------")
+        
         LinkedList.reverseShowList(test.head!.next!)
         // Do any additional setup after loading the view, typically from a nib.
     }
